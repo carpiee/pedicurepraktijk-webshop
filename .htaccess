@@ -1,0 +1,15 @@
+RewriteEngine On
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+RewriteRule ^/?naam/(.*?)/?$ /product/index.php?naam=$1 [L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\?naam=([^\&\ ]+)
+RewriteRule ^/?index\.php$ /product/%1? [L,R=301]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d

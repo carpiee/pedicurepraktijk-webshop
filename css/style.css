@@ -1,0 +1,284 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(166, 138, 134, 0.7);
+}
+* {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.betaal {
+  background-color: #f7f8f9;
+  min-width: 380px;
+  min-height: 370px;
+  padding: 20px;
+}
+
+.pedi {
+  display: flex;
+  justify-content: center;
+}
+
+.pedi a {
+  color: #32325d;
+  padding: 15px 0 0 5px;
+}
+.bedrag {
+  display: flex;
+  justify-content: center;
+}
+
+.bedrag p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+}
+
+.form-row {
+  margin: 30px;
+}
+button,
+.btn {
+  display: inline-block;
+  height: 40px;
+  width: 100%;
+  margin-top: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  white-space: nowrap;
+  background: #32325d;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+  cursor: pointer;
+}
+#name,
+#email {
+  min-width: 100%;
+  height: 40px;
+  width: 100%;
+  color: #32325d;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.StripeElement {
+  height: 40px;
+  width: 103.5%;
+  color: #32325d;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input,
+.StripeElement #name {
+  padding-left: 15px;
+  font-weight: bold;
+}
+
+input:focus,
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.weggeven {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.weggeven h1 {
+  font-size: 20px;
+}
+
+.aantal {
+  display: flex;
+  justify-content: center;
+}
+
+#aantal {
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.cadeau {
+  position: relative;
+}
+
+.geheel {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 80%;
+  left: 22%;
+}
+
+.img {
+  position: relative;
+}
+.img img {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type="radio"] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type="radio"]:checked + img {
+  outline: 2px solid #f00;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.relative {
+  position: relative;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin-right {
+  margin-right: 10px;
+}
+
+.max-width {
+  max-width: 260px;
+}
+
+.prijsoverlay {
+  position: absolute;
+  bottom: -10px;
+}
+
+.oud {
+  left: 245px;
+  display: inline-block;
+}
+
+strike {
+  margin-right: 5px;
+  color: red;
+}
+
+.info-cadeau {
+  margin-bottom: 35px;
+}
+
+.gestuurd {
+  position: absolute;
+  text-align: center;
+  top: 10%;
+  left: 50%;
+  min-width: 280px;
+  width: auto;
+  font-size: 25px;
+  transform: translate(-50%, -10%);
+  -webkit-transform: translate(-50%, -10%);
+  -moz-transform: translate(-50%, -10%);
+  -ms-transform: translate(-50%, -10%);
+  -o-transform: translate(-50%, -10%);
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .overlay {
+    top: 80%;
+    font-size: 15px;
+  }
+  body {
+    height: 100%;
+  }
+
+  .betaal {
+    width: 100%;
+    min-width: 0;
+  }
+}
