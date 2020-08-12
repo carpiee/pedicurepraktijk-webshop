@@ -1,7 +1,8 @@
 <?php
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+require_once("./vendor/autoload.php");
+$dotenv = Dotenv\Dotenv::createImmutable("./");
 $dotenv->load();
-\Stripe\Stripe::setApiKey(getenv('SECRET_KEY'));
+\Stripe\Stripe::setApiKey($_ENV['STRIPE_SECRET_KEY']);
 $cart = new Cart();
 $header = new Cms();
 $product = new Producten();

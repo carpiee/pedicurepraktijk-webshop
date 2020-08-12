@@ -4,8 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9c02a7a7f764ecf35116ef92a872fd8",
+    "content-hash": "bcba3f641b9c2cf9db6e1887778eae46",
     "packages": [
+        {
+            "name": "cekurte/environment",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jpcercal/environment.git",
+                "reference": "6be36b0585b1c856a86247e5d335063ba4f150f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jpcercal/environment/zipball/6be36b0585b1c856a86247e5d335063ba4f150f9",
+                "reference": "6be36b0585b1c856a86247e5d335063ba4f150f9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "cekurte/tdd": "^1.0.1",
+                "phpunit/phpunit": "^4.8",
+                "sensiolabs/security-checker": "^3.0",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cekurte\\Environment\\": "src/"
+                },
+                "files": [
+                    "src/env.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "João Paulo Cercal",
+                    "email": "jpcercal@gmail.com"
+                }
+            ],
+            "description": "A library to get the values from environment variables and process to php data types",
+            "keywords": [
+                "config",
+                "data",
+                "env",
+                "environment",
+                "process",
+                "types",
+                "variables"
+            ],
+            "time": "2016-05-27T15:00:31+00:00"
+        },
         {
             "name": "stripe/stripe-php",
             "version": "v7.32.0",
