@@ -1,5 +1,7 @@
 <?php
-\Stripe\Stripe::setApiKey('sk_live_1OWDuIFgyHZbB8hyaK0bcOOc00Tz8bw4cG');
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+\Stripe\Stripe::setApiKey(getenv('SECRET_KEY'));
 $cart = new Cart();
 $header = new Cms();
 $product = new Producten();
