@@ -2,8 +2,9 @@
 require('./vendor/autoload.php');
 require_once './config/init.php';
 
-
-\Stripe\Stripe::setApiKey('sk_live_1OWDuIFgyHZbB8hyaK0bcOOc00Tz8bw4cG');
+$dotenv = Dotenv\Dotenv::createImmutable("./");
+$dotenv->load();
+\Stripe\Stripe::setApiKey($_ENV['STRIPE_SECRET_KEY']);
 
 // You can find your endpoint's secret in your webhook settings
 $endpoint_secret = 'whsec_mDStEgjZ0PnP6fWXclrBFtI8e1Y0ibDR';
