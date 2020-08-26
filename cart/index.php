@@ -177,10 +177,21 @@ include './cart/templates/cart.php';
 <div class="my-48 container w-full max-w-7xl mx-auto">
     <?php require_once('./inc/feed.html') ?>
 </div>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
 <script src="./js/jquery-steps.js"></script>
-<script>
+<script src="./js/server.js"></script>
+<?php if(isset($_GET['nu_betalen'])): ?>
+<script type="text/javascript">
+var ssId = "<?php echo $sessId; ?>";
+const checkout_Id = (ssId);
+stripe.redirectToCheckout({
+    sessionId: checkout_Id
+}).then(function(result) {
+
+});
+</script>
+<?php endif; ?>
+<script type="text/javascript">
 $("#demo").steps({
     onChange: function(currentIndex, newIndex, stepDirection) {
         // step2

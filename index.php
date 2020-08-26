@@ -37,7 +37,6 @@ include './inc/header.php';
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 </style>
 <div class="max-w-7xl w-full h-full min-h-screen">
     <div class="container mx-auto px-4 py-10">
@@ -120,14 +119,3 @@ function toggleModal() {
 </script>
 <?php endif; ?>
 <script src="./js/server.js"></script>
-<script>
-var ssId = "<?php echo $sessId; ?>";
-const checkout_Id = (ssId);
-stripe.redirectToCheckout({
-    sessionId: checkout_Id
-}).then(function(result) {
-    // If `redirectToCheckout` fails due to a browser or network
-    // error, display the localized error message to your customer
-    // using `result.error.message`.
-});
-</script>
